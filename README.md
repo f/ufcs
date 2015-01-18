@@ -67,14 +67,25 @@ Normally, it's not allowed to uniform an anonymous function, but in this case, y
 
 ```js
 uniform({
-  add: function (x, y) { return x + y; }
-  remove: function (x, y) { return x - y; }
-  multiply: function (x, y) { return x * y; }
+  add: function (x, y) { return x + y; },
+  remove: function (x, y) { return x - y; },
+  multiply: function (x, y) { return x * y; },
   divide: function (x, y) { return x / y; }
 });
 
 add(1, 2).divide(3); //=> 1
 (1).add(2).divide(3); //=> 1
+```
+
+This could be written as
+
+```js
+uniform(
+  function add(x, y) { return x + y; },
+  function remove(x, y) { return x - y; },
+  function multiply(x, y) { return x * y; },
+  function divide(x, y) { return x / y; }
+);
 ```
 
 ## License

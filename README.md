@@ -90,7 +90,7 @@ uniform(
 
 ### Object Uniform
 
-Normally, it's not allowed to uniform an anonymous function, but in this case, you can. **Please do not use `this` in this functions.**
+Normally, it's not allowed to uniform an anonymous function, but in this case, you can. **Please do not use `this` in these functions.**
 
 ```js
 var Maths = {

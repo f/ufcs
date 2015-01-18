@@ -13,6 +13,15 @@ npm install ufcs
 
 A free function can be called with a syntax that looks as if the function were a member function of its first parameter type.
 
+Idea is simple, result is awesome.
+```js
+// With UFCS, you can call this function ...
+functionName ( firstParameter, [otherParameters...] )
+
+// ... like this.
+firstParameter.functionName ( [otherParameters...] )
+```
+
 ### Uniform Wrapper
 
 Just wrap the function and `ufcs` will handle rest.

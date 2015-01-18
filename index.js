@@ -7,13 +7,16 @@ function ufcs() {
       if (Object.prototype[name]) {
         throw "To uniform an existing function may hurt your feelings.";
       }
-      Object.prototype[name] = function () {
-        var args = Array.prototype.slice.call(arguments, 0);
-        if (args.length < fn.length) {
-          args = [this.valueOf()].concat(args);
-        }
-        return fn.apply(fn, args);
-      }
+      var uniformer = function (fn) {
+        return function () {
+          var args = Array.prototype.slice.call(arguments, 0);
+          if (args.length < fn.length) {
+            args = [this.valueOf()].concat(args);
+          }
+          return fn.apply(fn, args);
+        };
+      };
+      Object.prototype[name] = uniformer(fn);
     } else if (typeof fn === "object") {
       for (var method in fn) {
         var impl = fn[method];
@@ -25,5 +28,3 @@ function ufcs() {
     }
   }
 };
-
-module.export = ufcs;

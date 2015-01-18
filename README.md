@@ -72,6 +72,9 @@ uniform({
   multiply: function (x, y) { return x * y; }
   divide: function (x, y) { return x / y; }
 });
+
+add(1, 2).divide(3); //=> 1
+(1).add(2).divide(3); //=> 1
 ```
 
 ## License

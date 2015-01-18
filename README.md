@@ -37,6 +37,43 @@ Since it mutates `Object.prototype` you can use it with every type. So, you can 
 var result = add(2, 3).add(4).add(5); //=> 2 + 3 + 4 + 5 = 14
 ```
 
+## Examples
+
+```js
+uniform(add); function add(x, y) { return x + y; }
+uniform(remove); function remove(x, y) { return x - y; }
+uniform(multiply); function multiply(x, y) { return x * y; }
+uniform(divide); function divide(x, y) { return x / y; }
+
+(2).add(3).multiply(6).divide(2).remove(3).add(5).divide(5); //=> 3.4,  It's ((((2 + 3) * 6) / 2) - 3 + 5) / 5
+```
+
+### Multiple Uniform
+
+```js
+function add(x, y) { return x + y; }
+function remove(x, y) { return x - y; }
+function multiply(x, y) { return x * y; }
+function divide(x, y) { return x / y; }
+
+uniform(add, remove, multiply, divide);
+
+(2).add(3).multiply(6).divide(2).remove(3).add(5).divide(5); //=> 3.4,  It's ((((2 + 3) * 6) / 2) - 3 + 5) / 5
+```
+
+### Namespaced Uniform
+
+Normally, it's not allowed to uniform an anonymous function, but in this case, you can. **Please do not use `this` in this functions.**
+
+```js
+uniform({
+  add: function (x, y) { return x + y; }
+  remove: function (x, y) { return x - y; }
+  multiply: function (x, y) { return x * y; }
+  divide: function (x, y) { return x / y; }
+});
+```
+
 ## License
 MIT.
 

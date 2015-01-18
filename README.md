@@ -1,12 +1,12 @@
-# UFSC.js
-DLang's [Uniform Function Call Syntax (UFSC)][1] port to JavaScript
+# UFCS.js
+DLang's [Uniform Function Call Syntax (UFCS)][1] port to JavaScript
 
 > It's mutates the `Object.prototype`, be careful when you are using it.
 
 ## Install
 
 ```
-npm install ufsc
+npm install ufcs
 ```
 
 ## Overview
@@ -15,10 +15,10 @@ A free function can be called with a syntax that looks as if the function were a
 
 ### Uniform Wrapper
 
-Just wrap the function and `ufsc` will handle rest.
+Just wrap the function and `ufcs` will handle rest.
 
 ```js
-var uniform = require('ufsc');
+var uniform = require('ufcs');
 
 uniform(add);
 function add(x, y) {

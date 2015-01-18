@@ -1,5 +1,5 @@
 {
-  "name": "ufsc",
+  "name": "ufcs",
   "version": "1.0.0",
   "description": "DLang's UFSC port for JavaScript",
   "main": "index.js",
@@ -8,10 +8,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/f/ufsc"
+    "url": "https://github.com/f/ufcs"
   },
   "keywords": [
-    "ufsc",
+    "ufcs",
     "dlang",
     "uniform",
     "functional"
@@ -19,7 +19,7 @@
   "author": "Fatih Kadir Akin",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/f/ufsc/issues"
+    "url": "https://github.com/f/ufcs/issues"
   },
-  "homepage": "https://github.com/f/ufsc"
+  "homepage": "https://github.com/f/ufcs"
 }

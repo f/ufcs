@@ -16,10 +16,10 @@ A free function can be called with a syntax that looks as if the function were a
 Idea is simple, result is awesome.
 ```js
 // With UFCS, you can call this function ...
-functionName ( firstParameter, [otherParameters...] )
+funcName ( firstParameter, [otherParameters...] )
 
 // ... like this.
-firstParameter.functionName ( [otherParameters...] )
+firstParameter.funcName ( [otherParameters...] )
 ```
 
 ### Uniform Wrapper

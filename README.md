@@ -40,10 +40,17 @@ var result = add(2, 3).add(4).add(5); //=> 2 + 3 + 4 + 5 = 14
 ## Examples
 
 ```js
-uniform(add); function add(x, y) { return x + y; }
-uniform(remove); function remove(x, y) { return x - y; }
-uniform(multiply); function multiply(x, y) { return x * y; }
-uniform(divide); function divide(x, y) { return x / y; }
+uniform(add);
+function add(x, y) { return x + y; }
+
+uniform(remove);
+function remove(x, y) { return x - y; }
+
+uniform(multiply);
+function multiply(x, y) { return x * y; }
+
+uniform(divide);
+function divide(x, y) { return x / y; }
 
 (2).add(3).multiply(6).divide(2).remove(3).add(5).divide(5); //=> 3.4,  It's ((((2 + 3) * 6) / 2) - 3 + 5) / 5
 ```

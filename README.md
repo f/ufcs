@@ -1,4 +1,4 @@
-# Uniform.js (UFSC)
+# UFSC.js
 
 DLang's [Uniform Function Call Syntax (UFSC)][1] port to JavaScript
 

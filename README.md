@@ -36,4 +36,7 @@ Since it mutates `Object.prototype` you can use it with every type. So, you can 
 var result = add(2, 3).add(4).add(5); //=> 2 + 3 + 4 + 5 = 14
 ```
 
+## License
+MIT.
+
 [1]: http://dlang.org/function.html#pseudo-member

@@ -10,7 +10,7 @@ function ufcs() {
       Object.prototype[name] = function () {
         var args = Array.prototype.slice.call(arguments, 0);
         if (args.length < fn.length) {
-          args = [this.valueOf()].concat(args)l
+          args = [this.valueOf()].concat(args);
         }
         return fn.apply(fn, args);
       }

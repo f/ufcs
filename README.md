@@ -61,23 +61,7 @@ uniform(add, remove, multiply, divide);
 (2).add(3).multiply(6).divide(2).remove(3).add(5).divide(5); //=> 3.4,  It's ((((2 + 3) * 6) / 2) - 3 + 5) / 5
 ```
 
-### Namespaced Uniform
-
-Normally, it's not allowed to uniform an anonymous function, but in this case, you can. **Please do not use `this` in this functions.**
-
-```js
-uniform({
-  add: function (x, y) { return x + y; },
-  remove: function (x, y) { return x - y; },
-  multiply: function (x, y) { return x * y; },
-  divide: function (x, y) { return x / y; }
-});
-
-add(1, 2).divide(3); //=> 1
-(1).add(2).divide(3); //=> 1
-```
-
-This also could be written as
+Alternative syntax:
 
 ```js
 uniform(
@@ -86,6 +70,23 @@ uniform(
   function multiply(x, y) { return x * y; },
   function divide(x, y) { return x / y; }
 );
+```
+
+### Object Uniform
+
+Normally, it's not allowed to uniform an anonymous function, but in this case, you can. **Please do not use `this` in this functions.**
+
+```js
+var Maths = {
+  add: function (x, y) { return x + y; },
+  remove: function (x, y) { return x - y; },
+  multiply: function (x, y) { return x * y; },
+  divide: function (x, y) { return x / y; }
+};
+uniform(Maths); // Uniform all the methods.
+
+add(1, 2).divide(3); //=> 1
+(1).add(2).divide(3); //=> 1
 ```
 
 ## License

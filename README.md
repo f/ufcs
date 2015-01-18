@@ -77,7 +77,7 @@ add(1, 2).divide(3); //=> 1
 (1).add(2).divide(3); //=> 1
 ```
 
-This could be written as
+This also could be written as
 
 ```js
 uniform(

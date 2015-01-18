@@ -2,12 +2,15 @@
 
 DLang's [Uniform Function Call Syntax (UFSC)][1] port to JavaScript
 
+> It's mutates the `Object.prototype`, be careful when you are using it.
+
 ## Install
 
 ```
 npm install ufsc
 ```
 
+## Overview
 ```js
 var universal = require('ufsc');
 

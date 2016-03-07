@@ -5,7 +5,7 @@ function ufcs() {
       var name = fn.name || fn.alias;
       if (!name) { throw "Anonymous functions cannot be uniformed."; }
       if (Object.prototype[name]) {
-        throw "To uniform an existing function may hurt your feelings.";
+        throw new Error("To uniform an existing function may hurt your feelings.");
       }
       var uniformer = function (fn) {
         return function () {
